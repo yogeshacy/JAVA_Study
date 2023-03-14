@@ -1,0 +1,956 @@
+JVM --> byte code --> flatform dependent
+java code (.java file) --> java compiler --> byte code (.class file)--> JVM (psvm) --> JRE (Libraries) (WROA)--> JDK --> OS --> HW
+
+class Hello {
+	public static void main (String args[]) {
+		System.out.print("Hello World...");
+		System.out.println(10+5);
+		System.out.println(10-5);
+	}
+}
+
+variables --> store the data 
+strongly typed storage 
+class variable {
+	public static void main (String args[]) {
+		int num = 7;
+		int num2 = 6;
+		int result = num + num2;
+		System.out.println(result);	
+	}
+}
+
+Data type
+premitive  
+Integer  --> byte, short , int long
+Float  --> Double, float
+Character --> 
+Boolean --> true , false
+
+
+long --> 8 bytes
+int --> 4 bytes
+short --> 2 bytes
+byte --> 1 byte 
+
+float --> 4 bytes
+double --> 8 bytes
+
+double d = 7.3
+float f = 7.3f
+
+chat --> 2 bytes
+
+chat c = 'y';
+
+boolean b = true 
+
+class variable {
+	public static void main (String args[]) {
+		int num = 7;
+		byte by = 127;
+		short sh = 558;
+		long l = 2325l
+		
+		float f = 239.34f
+		double d = 234.32
+		
+		char c = 'k';
+		
+		boolean b = true;
+	}
+}
+
+Literals
+Type conversion & casting 
+byte b = 127;
+int i = 10;
+
+i = b --> implicit conversion, higher to lower 
+b = (byte) i --> explict conversion , lower to higher (casting)
+
+int n = 257;
+byte b = (byte)n; { n%127}
+
+float f = 57.6f;
+int n = (int)f;
+
+byte b = 257; //out of range
+
+Operators (+, -, *, /, %)
+
+int num = 5;
+
+ num = num + 2
+ num +=2;
+ 
+ num +=1;
+ num++; //increment
+ num--; //decrement
+ 
+ 
+ num++; // post- increment
+ ++num //pre - increment 
+ 
+relational operator (<, >, ==, !=, <=, >=)
+
+assignment operator --> =
+
+class operators {
+	public static void main (String args[]) {
+		int x = 7;
+		int y = 6;
+		boolean result = x > y; //true
+		boolean result2 = x < y; //false
+		System.out.println(result);	
+	}
+}
+
+Lofical operator (&&, ||, !) 
+and --> &&
+or --> ||
+Not --> !
+
+class operators {
+	public static void main (String args[]) {
+		int x = 7;
+		int y = 6;
+		int a = 5;
+		int b = 8;
+		
+		boolean result = x > y && a >  b ; 
+		boolean result1 = x > y || a < b ; 
+		
+		boolean result2 = x < y; //false
+		System.out.println(result);
+        System.out.println(!result1); // oposite of result 	
+	}
+}
+
+condition statement 
+change the flow of operaion
+
+class simpleif {
+	public static void main (String args[]) {
+		int x = 7;
+		
+		if(x>=10)
+		if(x>=10 && x=<20)
+		System.out.println("Hello");
+     //   System.out.println("Bye");	
+	}
+}
+
+class ifelse {
+	public static void main (String args[]) {
+		int x = 7;
+		
+		if(x>10)
+		   System.out.println("Hello");
+		else   
+           System.out.println("Bye");	
+	}
+}
+
+class ifelseif {
+	public static void main (String args[]) {
+		int x = 7;
+		int y = 8;
+		int z = 9;
+		
+		if(x>y && x>z)
+		   System.out.println(x);
+		else if (y>z)  
+           System.out.println(y);
+        else  
+           System.out.println(z);		   
+	}
+}
+
+Ternary operator (?:)
+
+class ternary {
+	public static void main (String args[]) {
+		int x = 7;
+		int result = 0
+		
+		result = n%2==0 ? 10 : 20;
+		System.out.println(result);
+	}
+}
+
+switch statement
+
+class switchcase {
+	public static void main (String args[]) {
+		int x = 7;
+		switch(n){
+			case 1:
+			   System.out.println("Monday");
+			   break;
+			case 2:
+	           System.out.println("Tuesday");
+	           break;
+	        case 3:
+	           	System.out.println("Wednesday");
+	           	beak;
+	        case 4:
+	           	System.out.println("Thursday");
+	           	break;
+	        case 5:
+	           	System.out.println("Friday");
+	           	break;
+	        case 6:
+	           	System.out.println("Saturday");
+	           	break;
+	        case 7:
+	           	System.out.println("Sunday");
+	        default :
+	           	System.out.println("Enter valid number");
+		
+		}
+		
+	}
+}
+
+Looing --> repeatedly execute statement
+for
+while 
+do-while
+
+class whileloop {
+	public static void main (String args[]) {
+		int i = 1;
+		while(i<=4)
+		{
+			System.out.println("Hello" +i);
+			i++;
+		}
+		System.out.println("Bye" +i);
+	}
+}
+
+class nestedwhileloop {
+	public static void main (String args[]) {
+		int i = 1;
+		while(i<=4)
+		{
+			System.out.println("Hello" +i);
+			int j = 1;
+			while(j<=2)
+			{
+				System.out.println("Hai" +j);
+				j++;
+			}
+			i++;
+		}
+		System.out.println("Bye" +i);
+	}
+}
+
+class dowhileloop {
+	public static void main (String args[]) {
+		int i = 5;
+		do
+		{
+			System.out.println("Hello" +i);
+			i++;
+		}while(i<=4);
+	}
+}
+
+for loop
+
+class forloop {
+	public static void main (String args[]) {
+		 for(int i=1;i<=4;i++)
+		{
+			System.out.println("Hello" +i);
+		}
+	}
+}
+
+class forloop {
+	public static void main (String args[]) {
+	     int i=1
+		 for(;i<=5;)
+		{
+			System.out.println("Day" +i);
+			i++;
+		}
+	}
+}
+
+class nestedforloop {
+	public static void main (String args[]) {
+		for(int i=1;i<=5;i++)
+		{
+			System.out.println("Day" +i);
+			for(int i=1;i<=5;i++)
+		    {
+		    	System.out.println("  "+(j+8) + "--"+(j+9));
+		    }
+		}
+	}
+}
+
+forloop pattern
+
+object oriented programming
+
+object --> property and behaviour
+class --> blue print
+
+class Calculator {
+	public int add(int n1, int n2) {
+		int add = n1+n2;
+		return add;
+	}
+
+}
+
+class Demo {
+	public static void main (String args[]) {
+		int num1 = 7;
+		int num2 = 6; //premetives
+		
+		Calculator calc = new Calculator();  //refrence variable
+		int result = calc.add(num1,num2);	
+		
+		System.out.println(result);
+	}
+}
+
+JDK --> Java Devlopment Kit
+JVM --> Java Virtual Machine
+
+methods
+
+class Computer {
+	public void playMusic(){
+		System.out.println("playing music");
+	}
+	public String getMyPen(int cost){
+		if(cost >=10)
+			return "pen";
+		else 
+			return "Nothing";
+	}
+}
+class Demo {
+	public static void main (String args[]) {
+		
+		Computer obj = new Computer();
+		obj.playMusic();
+		String str = obj.getMyPen(10);
+		System.out.println(str);
+	}
+}
+
+method overloading
+
+same method name but different type of perameter and number of arguments
+
+class Calculator {
+
+    int num1 // instance variable
+	num1 = 5;
+	public int add(int n1, int n2) { // n1 and n2 local variable 
+		int add = n1+n2;
+		return add;
+	}
+	public int add(int n1, int n2, int n3) {
+		int add = n1+n2+n3;
+		return add;
+	}
+	public double add(int n1, int n2) {
+		int add = n1+n2;
+		return add;
+	}
+
+}
+
+class Demo {
+	public static void main (String args[]) {
+		int num1 = 7;
+		int num2 = 6; //premetives
+		
+		Calculator calc = new Calculator();  //refrence variable
+		int result = calc.add(num1,num2);	
+		
+		System.out.println(result);
+	}
+}
+
+JVM
+stack memory --> local variable
+heap memory --> instance variable
+
+class Calculator {
+    int num // instance variable
+	num1 = 5;
+	public int add(int n1, int n2) { // n1 and n2 local variable 
+		System.out.println(num);
+		return n1+n2;	
+	}
+}
+
+class Demo {
+	public static void main (String args[]) {
+		int num2 = 6; //premetives
+		
+		Calculator obj = new Calculator();  //refrence variable
+		int result = obj.add(5,7);	
+		Calculator obj1 = new Calculator();  //refrence variable
+		int result = obj1.add(3,4 );
+		
+		obj.num = 10;
+		
+		System.out.println(result);
+		System.out.println(obj.num);
+		System.out.println(obj.num);
+	}
+}
+
+Array
+
+int num[] = {5,6,7};	
+int num1[] = new num1[4]
+
+class DemoArray {
+	public static void main (String args[]) {
+		int nums[] = {4, 3 ,7, 2, 5};
+		
+		System.out.println(nums[4]);
+		
+		int nums1[] = new nums1[5];
+		nums1[0] = 4;
+		nums1[1] = 3;
+		
+	    System.out.println(nums[1]);		
+	}
+}
+
+class DemoArray {
+	public static void main (String args[]) {
+		
+		int nums[] = new int[5];
+		nums[0] = 4;
+		nums[1] = 3;
+		nums[2] = 4;
+		nums[3] = 3;
+		nums[4] = 4;
+		nums[5] = 3;
+		for (int i = 0;i<5;i++){
+			System.out.println(nums[1]);		
+		}
+	}
+}
+
+multdiamentional Array 
+int nums[][] = new nums[2][3]
+
+class DemoArray {
+	public static void main (String args[]) {
+		
+		int nums[][] = new int[3][4];
+		
+		for (int i=0;i<3;i++){
+			for (int j=0;i<4;j++){
+				nums[i][j] = (int)(Math.randam()*10);
+            }				
+		}
+		
+		for (int i=0;i<3;i++){
+			for (int j=0;i<4;j++){
+				System.out.print(nums[i][j]+ " ");
+            }				
+			System.out.println();
+		}
+		
+		for (n[] : nums){ //enhanced loop
+			for (m : n){
+				System.out.print(m + " ");
+            }				
+			System.out.println();
+		}
+		
+	}
+}
+
+dynamic array  or jagged array
+
+class DemoArray {
+	public static void main (String args[]) {
+		
+		int nums[][] = new int[3][]; //jagged array 
+		
+		int nums[0] = new int[3];
+		int nums[1] = new int[4];
+		int nums[2] = new int[2];
+		
+		for (int i=0;i<nums.length;i++){
+			for (int j=0;i<nums[i].length;j++){
+				nums[i][j] = (int)(Math.randam()*10);
+            }				
+		}
+
+		for (n[] : nums){ //enhanced loop
+			for (m : n){
+				System.out.print(m + " ");
+            }				
+			System.out.println();
+		}
+		
+	}
+}
+
+array of object 
+
+class Students {
+	int rillno;
+	String name;
+	int marks;
+}
+
+class DemoArray {
+	public static void main (String args[]) {
+		
+		Students s1= new Students();
+		s1.rollno = 1;
+		s1.name = "yogesh";
+		s1.marks = 78;
+		
+		Students s2= new Students();
+		s2.rollno = 2;
+		s2.name = "yogesh";
+		s2.marks = 78;
+		
+		Students s3= new Students();
+		s3.rollno = 3;
+		s3.name = "yogesh";
+		s3.marks = 78;
+		
+		Students students[] = new Students[3];
+		students[0] = s1;
+		students[1] = s2;
+		students[2] = s3;
+		
+		for (int i=0;i<students.length;i++){
+			System.out.println(students[i].name+ ":"+ students[i].marks );
+		}
+		
+		for(Students stud : students) {
+			System.out.println(stud.name+ ":"+ stud.marks );
+		}
+		
+	}
+}
+
+foreach loop
+
+class foreachloop {
+	public static void main (String args[]) {
+		
+		int nums[] = new int[5];
+		nums[0] = 4;
+		nums[1] = 3;
+		nums[2] = 4;
+		nums[3] = 3;
+		nums[4] = 4;
+		nums[5] = 3;
+		for (int n : nums){
+			System.out.println(n);		
+		}
+	}
+}
+
+String
+strings are stored in string content pool (SCP)
+strings are immuatable --> it can't change
+string buffer
+string builder
+
+class stringDemo {
+	public static void main (String args[]) {
+		//String name = "yogesh";
+		String name = new String ("yogesh");
+		System.out.println(name);	
+		System.out.println(name.hasCode());		
+		System.out.println("hello"+name);
+		System.out.println(name.charAt(1);		
+		System.out.println(name.concat("waran"));	
+
+		String name1 = "yogesh";
+		name = name + "waran";
+		System.out.println("Hai " + name1);
+		
+		String s1 = "yogesh";
+		String s2 = "yogesh";
+		System.out.println(s1 == s2);
+	}
+}
+
+Mutable string
+StringBuffer and StringBuilder
+StringBuffer is threadsafe
+
+class stringDemo {
+	public static void main (String args[]) {
+		
+		StringBuffer sb = new StringBuffer("yogesh");
+		System.out.println(sb.capacity());
+		System.out.println(sb.length());
+	    sb.append("waran");
+		System.out.println(sb);
+		
+		String str = sb.toString();
+	}
+}
+
+static 
+
+static variable shared object
+it refer class 
+
+class Mobile{
+	String brand;
+	int price
+	static String name 
+	
+	public void show() {
+		System.out.println(brand + ":" +price+ ":" +name);
+	}
+
+}
+
+class stringDemo {
+	public static void main (String args[]) {
+		
+		Mobile obj1 = new Mobile();
+		obj1.brand = "Apple";
+		obj1.price = 18000;
+		Mobile.name = "smartphone";
+		
+		Mobile obj2 = new Mobile();
+		obj2.brand = "samsung";
+		obj2.price = 8000;
+		Mobile.name = "smartphone";
+		
+		Mobile.name  = "phone"; /
+		
+		obj1.show();
+		obj2.show();
+	}
+}
+----
+class Mobile{
+	String brand;
+	int price
+	static String name 
+		
+	static{
+		name = "phone";
+		System.out.println("Static Block");
+	}
+	
+	public Mobile() {
+		brand = "";
+		price = 200
+		System.out.println("In Constructor");
+	}
+	
+	public void show() {
+		System.out.println(brand + ":" +price+ ":" +name);
+	}
+
+}
+
+class stringDemo {
+	public static void main (String args[]) {
+		
+		Class.forName("Mobile");
+		Mobile obj1 = new Mobile();
+		obj1.brand = "Apple";
+		obj1.price = 18000;
+		Mobile.name = "smartphone";
+		
+		obj2.show();
+	}
+}
+
+class loader load once
+while loading the class static also created 
+non static variable can not used static method directly 
+
+class Mobile{
+	String brand;
+	int price
+	static String name 
+		
+	static{
+		name = "phone";
+		System.out.println("Static Block");
+	}
+	
+	public Mobile() {
+		brand = "";
+		price = 200
+		System.out.println("In Constructor");
+	}
+	
+	public void show() {
+		System.out.println(brand + ":" +price+ ":" +name);
+	}
+	
+	public static void show1(Mobile obj) {
+		System.out.println(obj.brand + ":" +obj.price+ ":" +name);
+	}
+
+}
+
+class stringDemo {
+	public static void main (String args[]) {
+		
+		Class.forName("Mobile");
+		Mobile obj1 = new Mobile();
+		obj1.brand = "Apple";
+		obj1.price = 18000;
+		Mobile.name = "smartphone";
+		
+		obj1.show();
+		
+		Mobile.show1(obj);
+		
+		
+	}
+}
+
+encaptulation
+
+class Human {
+	int age;
+	String name;
+}
+class stringDemo {
+	public static void main (String args[]) {
+		Human obj = new Human();
+		obj.age = 20;
+		obj.name = "yogesh";
+		
+		System.out.println(obj.name);
+		
+	}
+}
+
+
+class Human {
+	private int age = 20;
+	private String name = "yogesh";
+	
+	public int getAge(){
+		return age;
+	}
+	
+	public String getName(){
+		return name;
+	}
+}
+class stringDemo {
+	public static void main (String args[]) {
+		Human obj = new Human();
+		
+		System.out.println(obj.getName + ":" + obj.getAge());
+		
+	}
+}
+
+class Human {
+	
+	private int age;
+	private String name;
+	
+	public int getAge(){
+		return age;
+	}
+	
+	public void setAge(int a){
+		age = a;
+	}
+	
+	public String getName(){
+		return name;
+	}
+	
+	public void setName(String n){
+		name = n;
+	}
+}
+class stringDemo {
+	public static void main (String args[]) {
+		Human obj = new Human();
+		
+		obj.setAge(20);
+		obj.setName("yogesh");
+		
+		System.out.println(obj.getName + ":" + obj.getAge());
+		
+	}
+}
+
+getter setter
+this -- > represent the current object
+
+
+class Human {
+	
+	private int age;
+	private String name;
+	
+	public int getAge(){
+		return age;
+	}
+	
+	public void setAge(int age){
+		this.age = age;
+	}
+	
+	public String getName(){
+		return name;
+	}
+	
+	public void setName(String name){
+		this.name = name;
+	}
+}
+class stringDemo {
+	public static void main (String args[]) {
+		Human obj = new Human();
+		
+		obj.setAge(20);
+		obj.setName("yogesh");
+		
+		System.out.println(obj.getName + ":" + obj.getAge());
+		
+	}
+}
+
+constractor 
+its method name same as class
+it's called automatically while creating object of class 
+
+class Human {
+	
+	private int age;
+	private String name;
+	
+	public Human(){    //default constractor
+
+	}
+	
+	public Human(int age, String name){  //parameterized constractor
+		this.age =age;
+		this.name = name;
+	}
+	
+	public int getAge(){
+		return age;
+	}
+	
+	public void setAge(int age){
+		this.age = age;
+	}
+	
+	public String getName(){
+		return name;
+	}
+	
+	public void setName(String name){
+		this.name = name;
+	}
+}
+class stringDemo {
+	public static void main (String args[]) {
+		Human obj = new Human();
+		
+		obj.setAge(20);
+		obj.setName("yogesh");
+		
+		Human obj1 = new Human();
+		Human obj2 = new Human(30, "yogi");
+		
+		System.out.println(obj1.getName + ":" + obj1.getAge());
+		System.out.println(obj2.getName + ":" + obj2.getAge());
+		
+	}
+}
+
+this and super method
+super()
+its default in constractor
+every class extends in Object class
+super() execute the super class 
+this()
+this() method execute the same class 
+
+
+class A {
+	public A() {
+		super();
+		System.out.println("A constractor");
+	}
+	public A (int n) { 
+	    super();
+		System.out.println("in A int");
+	}
+	
+}
+class B extends A {
+	public B() { 
+	    super(n);
+		System.out.println("B constractor");
+	}
+	public B(int n) { 
+	    this();
+		System.out.println("in B int");
+	}
+}
+
+class stringDemo {
+	public static void main (String args[]) {
+		//B obj = new B();
+		B obj1 = new B(5);
+		
+	}
+}
+
+Nameing convention
+Cames case
+
+class and interface --> Calc, Runable
+variable and method --> mark , show()
+conbstants --> all capital , PIE, 
+
+showMyMarks() --> camel case
+show_my_marks() --> snake case 
+
+Anonymous Object
+Anonymous object can't reuse 
+
+class A {
+	public A() {
+		System.out.println("A constractor");
+	}
+	public void show() {
+		System.out.println(brand + ":" +price+ ":" +name);
+	}
+	
+}
+class stringDemo {
+	public static void main (String args[]) {
+		new A().show(); //anonymous object
+		new A().show();
+	}
+}
+
+Inheritance 
